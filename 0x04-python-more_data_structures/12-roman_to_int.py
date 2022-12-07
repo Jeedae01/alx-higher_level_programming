@@ -10,11 +10,11 @@ def roman_to_int(roman_string):
             'C': 100,
             'D': 500,
             'M': 1000
-     }
-     decs = [roman_dict[x] for x in roman_string]
-     output = 0
-     for i in range(len(decs)):
+    }
+    decs = [roman_dict[x] for x in roman_string]
+    output = 0
+    for i in range(len(decs)):
         output += decs[i]
         if decs[i - 1] < decs[i] and i != 0:
             output -= (decs[i - 1] + decs[i - 1])
-     return output
+    return output
